@@ -4,8 +4,6 @@
 // @namespace    https://github.com/dydtjr1128/Chzzk-Chatting-Enhancements
 // @homepageURL  https://github.com/dydtjr1128/Chzzk-Chatting-Enhancements
 // @supportURL   https://github.com/dydtjr1128/Chzzk-Chatting-Enhancements/issues
-// @updateURL    https://github.com/dydtjr1128/Chzzk-Chatting-Enhancements/chzzk.js
-// @downloadURL  https://github.com/dydtjr1128/Chzzk-Chatting-Enhancements/chzzk.js
 // @version      2023-12-19
 // @description  치지직 채팅 유저 색 변경 스크립트입니다.
 // @match        https://chzzk.naver.com/*
