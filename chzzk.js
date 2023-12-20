@@ -30,11 +30,11 @@
         let 숫자 = 0;
 
         for (let i = 0; i < text.length; i++) {
-            // 각 문자의 아스키 코드 값을 더합니다.
+            // 각 문자의 아스키 코드 값을 더하기
             숫자 += text.charCodeAt(i);
         }
 
-        // 0에서 randomColorNumber 사이의 범위로 조정합니다.
+        // 0에서 randomColorNumber 사이의 범위로 조정
         숫자 = (숫자) % (randomColorNumber+1);
 
         return 숫자;
@@ -50,16 +50,29 @@
                 if (addedNode.nodeType === 1) {
                   const elements = addedNode.querySelectorAll('[class^="live_chatting_list_item"] [class^="name_text"]');
                   elements.forEach(element => {
-                        // name_text로 시작하는 엘리먼트의 값 가져오기
+					   // 현재 시간을 가져오고 HH:mm 형식으로 포맷팅
+                        const currentTime = new Date();
+                        const hours = currentTime.getHours().toString().padStart(2, '0');
+                        const minutes = currentTime.getMinutes().toString().padStart(2, '0');
+                        const timeText = `${hours}:${minutes}`;
+
+                        // 새로운 span 엘리먼트 생성
+                        const spanElement = document.createElement('span');
+                        spanElement.textContent = `${timeText} `;
+
+                        // 기존 엘리먼트의 자식으로 추가
+                        element.parentNode.insertBefore(spanElement, element);
+						
                         const textContent = element.textContent.trim();
-                        element.style.color = 랜덤색상들[텍스트를_숫자로_변환(textContent)];
                         // 값에 따라 CSS 스타일 조정
+                        element.style.color = 랜덤색상들[텍스트를_숫자로_변환(textContent)];
                     });
                 }
             });
         });
     });
-
+document.querySelectorAll('[class^="live_chatting_list_donation"]')
+document.querySelectorAll('[class^="live_chatting_list_item"]') 
     // 원하는 노드를 감시
     const targetNode = document.body;
     const config = { childList: true, subtree: true };
